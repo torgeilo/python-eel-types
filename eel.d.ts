@@ -6,24 +6,24 @@
  *
  * Put this file in your project.
  *
- * Type up your Python functions:
+ * Type up your exposed Python functions:
  *
- *   interface MyPythonFuncs {
+ *   interface MyPyFuncs {
  *     foo(arg: string): number;
  *     bar(arg: number): void;
  *   }
  *
  * Declare the eel global where you need it:
  *
- *   declare const eel: Eel<MyPythonFuncs>;
+ *   declare const eel: Eel<MyPyFuncs>;
  *
  * Or potentially on window:
  *
  *   interface Window {
- *     eel: Eel<MyPythonFuncs>;
+ *     eel: Eel<MyPyFuncs>;
  *   }
  *
- * Use it:
+ * Use it, now typed:
  *
  *   const num = await eel.foo('hello')();
  */

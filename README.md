@@ -9,8 +9,8 @@ Grab [eel.d.ts](https://github.com/torgeilo/python-eel-types/blob/main/eel.d.ts)
 Manually type up (or find a converter for) your Python functions in TypeScript and declare `eel`:
 
 ```ts
-// Type up the Python functions in TypeScript:
-interface MyPythonFuncs {
+// Type up the exposed Python functions in TypeScript:
+interface MyPyFuncs {
   // def get_number() -> float:
   get_number(): number;
 
@@ -19,10 +19,15 @@ interface MyPythonFuncs {
 }
 
 // Declare the eel global:
-declare const eel: Eel<MyPythonFuncs>;
+declare const eel: Eel<MyPyFuncs>;
+
+// Or potentially on window:
+interface Window {
+  eel: Eel<MyPyFuncs>;
+}
 
 // Or make a typed alias:
-const e = eel as Eel<MyPythonFuncs>;
+const e = eel as Eel<MyPyFuncs>;
 
 // The Python functions are now typed up in the eel API, as async and with callback:
 async function test(): void {
