@@ -10,7 +10,7 @@ Manually type up (or find a converter for) your Python methods in TypeScript and
 
 ```ts
 // Type up the Python methods in TypeScript:
-interface MyPythonDefs {
+interface MyPythonFuncs {
   // def get_number() -> float:
   get_number(): number;
 
@@ -19,10 +19,10 @@ interface MyPythonDefs {
 }
 
 // Declare the eel global:
-declare const eel: Eel<MyPythonDefs>;
+declare const eel: Eel<MyPythonFuncs>;
 
 // Or make a typed alias:
-const e = eel as Eel<MyPythonDefs>;
+const e = eel as Eel<MyPythonFuncs>;
 
 // The Python methods are now typed up in the eel API, as async and with callback:
 async function test(): void {
