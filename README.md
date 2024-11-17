@@ -1,12 +1,12 @@
 # TypeScript types for Python Eel
 
-Type up your [Python Eel](https://github.com/python-eel/Eel) functions in TypeScript so that you can call them from `eel` with some level of type safety.
+Type up your exposed [Python Eel](https://github.com/python-eel/Eel) functions in TypeScript so that you can call them from the `eel` global with some level of type safety.
 
 ## How to
 
 Grab [eel.d.ts](https://github.com/torgeilo/python-eel-types/blob/main/eel.d.ts) and place it in your project.
 
-Manually type up (or find a converter for) your Python functions in TypeScript and declare `eel`:
+Manually type up (or find a converter for) your Python functions in TypeScript and declare `eel`s type:
 
 ```ts
 // Type up the exposed Python functions in TypeScript:
