@@ -6,7 +6,7 @@ Type up your exposed [Python Eel](https://github.com/python-eel/Eel) functions i
 
 Grab [eel.d.ts](https://github.com/torgeilo/python-eel-types/blob/main/eel.d.ts) and place it in your project.
 
-Manually type up (or find a converter for) your Python functions in TypeScript and declare `eel`s type:
+Manually type up (or find a converter for) your Python functions in TypeScript and declare `eel`'s type:
 
 ```ts
 // Type up the exposed Python functions in TypeScript:
