@@ -33,13 +33,12 @@ declare namespace Eel {
     expose: (method: () => unknown, name?: string) => void;
   }
 
+  function ReturnFunc<Ret>(): Promise<Ret>;
+  function ReturnFunc<Ret>(callback: (ret: Ret) => void): void;
+
   type ExposedDefs<Defs> = {
     [Name in keyof Defs]: Defs[Name] extends (...args: infer Args) => infer Ret
-      ? (
-          ...args: Args
-        ) => <Callback extends void | ((ret: Ret) => void)>(
-          callback?: Callback,
-        ) => Callback extends (ret: Ret) => void ? void : Promise<Ret>
+      ? (...args: Args) => typeof ReturnFunc<Ret>
       : never;
   };
 }
