@@ -2,7 +2,7 @@
 
 Type up your exposed [Python Eel](https://github.com/python-eel/Eel) functions in TypeScript so that you can call them from the `eel` global with some level of type safety.
 
-## How to
+## How to use
 
 Grab [eel.d.ts](https://github.com/torgeilo/python-eel-types/blob/main/eel.d.ts) and place it in your project.
 
